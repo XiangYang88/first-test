@@ -1,0 +1,68 @@
+﻿body {
+    background: none;
+    height: auto;
+}
+
+#msg2 tr {
+    line-height: 37px;
+}
+
+#msg2 {
+    color: #666;
+    font-size: 13px;
+}
+
+.inputstyle {
+    border: 1px solid #ccc;
+    width: 248px;
+    height: 20px;
+    line-height: 25px;
+    vertical-align: middle;
+    float: left;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.button22 {
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    background: #020374;
+    color: #fff;
+    border: 1px solid #bbb;
+    font-family: 'Microsoft YaHei';
+}
+
+#form_upload input {
+    border: 1px solid #CAD9EA;
+    line-height: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.Ms_tips {
+    width: 10px;
+    padding-left: 3px;
+    color: Red;
+}
+
+#errcc {
+    float: right;
+}
+
+.err {
+    color: Red;
+    padding: 0 5px;
+}
+
+.err2 {
+    color: Red;
+    position: absolute;
+    left: 250px;
+}
+
+.err3 {
+    color: Red;
+    position: absolute;
+    left: 350px;
+}

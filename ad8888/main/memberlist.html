@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>内容管理=>会员管理</title>
+    <link href="../style/Style.css" rel="stylesheet" />
+    <link href="../lhgdialog/skins/default.css" rel="stylesheet" />
+    <script src="../script/jquery-1.7.2.min.js"></script>
+    <script src="../script/jquery.treeview.js"></script>
+    <script src="../lhgdialog/lhgdialog.min.js"></script>
+    <script src="../script/jQueryPlugin.js"></script>
+    <script src="../script/JavaScript.js"></script>
+    <!--[if lte IE 6]>    <script src="script/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type="text/javascript">DD_belatedPNG.fix('*');</script><![endif]-->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var tr = jQuery(".User tr");
+            tr.each(function () {
+                var t = jQuery(this);
+                t.dblclick(function () {
+                    var api = jQuery.dialog({
+                        lock: true,
+                        title: "编辑会员",
+                        content: "url:/SystemAdmin/dialog/setUser.html",
+                        width: 835,
+                        height: 350,
+                        cancelVal: '关闭',
+                        cancel: true,
+                        ok: true
+                    });
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="column_Box mainAutoHeight">
+        <div class="tab">
+            <ul>
+                <li class="current"><a href="javascript:">會員列表</a></li>
+                <li><a href="javascript:">類別設置</a></li>
+            </ul>
+        </div>
+        <div class="wrapBox mainAutoHeight">
+            <!--會員列表-->
+            <div class="body User">
+                <div class="item">
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>新建</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_edit"></span><i>编辑</i></a>
+                    <a href="javascript:"class="dot_Item" onclick="if(!confirm('确认要删除吗？')) return; " ><span class="Icon_item icon_shanchu"></span><i>删除</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_export"></span><i>导出</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_zhuanyi"></span><i>回收站</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_pizhu"></span><i>字段设置</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_import"></span><i>导入</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_import"></span><i>发送邮件</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_shenghe"></span><i>审核通过</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_shenghe"></span><i>审核不通过</i></a>
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>批量更新</i></a>
+                    <div class="searchBar">
+                        会员类别:
+                        <select><option>--请选择--</option><option>--神秘类别--</option><option>--相关类别--</option></select>
+                        会员名称：
+                        <input type="text" class="txt" />&nbsp;&nbsp;<input type="submit" class="submit btn_search" value="搜索" />
+                    </div>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="0" class="center">
+                    <thead>
+                        <tr>
+                            <th style="width:20px;"><input type="checkbox" name="checkBox_All" class="checkBox_All" /></th>
+                            <th>状态</th>
+                            <th>会员名称</th>
+                            <th>姓名</th>
+                            <th >性别</th>
+                            <th>会员类型</th>
+                            <th>联系电话</th>
+                            <th>联系QQ</th>
+                            <th>电子邮箱</th>
+                            <th>美容地址</th>
+                            <th style="width:134px;" class="td_btn"><span class="t">注册时间</span><a href="javascript:" class="btn_img"></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="checkBox" class="checkBox_list" /></td>
+                            <td>已审核</td>
+                            <td>kief_fung</td>
+                            <td>馮杰夫</td>
+                            <td><a href="#">男</a></td>
+                            <td>null</td>
+                            <td>222</td>
+                            <td><a href="#">020-23300119</a></td>
+                            <td>020-23300119</td>
+                            <td><a href="#">020-23300119</a></td>
+                            <td>2012-08-07</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkBox" class="checkBox_list" /></td>
+                            <td>已审核</td>
+                            <td>年nian</td>
+                            <td>年</td>
+                            <td><a href="#">男</a></td>
+                            <td>不普通會員</td>
+                            <td>222</td>
+                            <td><a href="#">020-89598566</a></td>
+                            <td>23300119</td>
+                            <td><a href="#">韓國(高麗、新羅、南朝鮮)</a></td>
+                            <td>2012-08-07</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="lineHeight" style="border-bottom:1px dashed #cccccc;"></div>
+            </div>
+            <!--類別設置-->
+            <div class="body">
+                <div class="item">
+                    <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian2"></span><i>新建</i></a>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th style="width:65%;">类别名称</th>
+                            <th style="width:10%;">排列次序</th>
+                            <th style="width:25%;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align:left;">
+                        <tr>
+                            <td>┝ 会员类别</td>
+                            <td>1</td>
+                            <td>
+                                <a href="#"class="dot_Item"><span class="Icon_item icon_edit"></span><i>编辑</i></a>
+                                <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>删除</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;┝ 普通会员</td>
+                            <td>1</td>
+                            <td>
+                                <a href="#"class="dot_Item"><span class="Icon_item icon_edit"></span><i>编辑</i></a>
+                                <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>删除</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;┝ 经销商</td>
+                            <td>1</td>
+                            <td>
+                                <a href="#"class="dot_Item"><span class="Icon_item icon_edit"></span><i>编辑</i></a>
+                                <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>删除</i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

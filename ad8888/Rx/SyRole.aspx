@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SyRole.aspx.cs" Inherits="Rx_SyRole" %>

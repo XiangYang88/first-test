@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta name="keywords" content="jquery 弹出多选框,js 多选框,javascript 多选框">
+	<meta name="description" content="jquery 弹出多选框,js 多选框,javascript 多选框">
+	<title>test</title>
+    <link rel="stylesheet" type="text/css" href="layer.css" />
+    <SCRIPT type="text/javascript" src="jquery-1.3.2.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="jquery.mulitselector.js" charset="utf-8"></SCRIPT>
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+		function test1(){
+
+			var data = 
+			[
+				{id: "10",name: "请选择中国苹果"},
+				{id: "20",name: "请选择中国香蕉"},
+				{id: "30",name: "请选择中国西瓜"},
+				{id: "40",name: "请选择中国桃子"},
+				{id: "50",name: "请选择中国葡萄"}
+			];
+
+			$("#test1").mulitselector({
+				title:"请选择类别-自定义标题",
+				data:data
+			});
+
+			//alert(document.getElementById("bd").innerHTML);
+		}
+
+		function test2(){
+
+			var data = 
+			[
+				{id: "10",name: "请选择苹果"},
+				{id: "20",name: "请选择香蕉"},
+				{id: "30",name: "请选择西瓜"}
+			];
+
+			$("#test2").mulitselector({
+				title:"请选择类别-自定义标题 Test2",
+				data:data
+			});
+
+			//alert(document.getElementById("bd").innerHTML);
+		}
+	//-->
+	</SCRIPT>
+</head>
+
+<body id="bd">
+<br>
+<div class="wrap" id="p_wrap">
+	<div class="sech">
+以下为演示 demo<br><br>
+简单弹出复选框: &nbsp;<input name="" type="text" value="点击试验一下" style="width:218px" onclick="test1()"  readonly="readonly" id="test1"/>
+	</div>
+</div>
+
+<br>
+
+<div class="wrap" id="p_wrap">
+	<div class="sech">
+自定义下拉列表: &nbsp;&nbsp;<input name="" type="text" class="inp_txt inp_wid1 col_b" value="点击试验一下" onclick="test2()" readonly="readonly" id="test2"/><input type="button" class="inp_sel" id="txtIndDrop" onclick="test2()"/>
+	</div>
+</div>
+
+</body>
+</html>

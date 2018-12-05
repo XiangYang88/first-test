@@ -1,0 +1,149 @@
+﻿/*手机模版*/
+.g_web{position: relative;min-height: 100%;_height: 100%}
+.containerPlaceholder {clear: both;width: 100%;margin: 0;padding: 0;font-size: 0;overflow: hidden;height: 0;}
+.floatLeftTop {position: fixed;_position: absolute;top: 0;left: 0;width: 0;height: 0;font-size: 0;z-index: 29;margin: 0;padding: 0;}
+.floatRightTop {position: fixed;_position: absolute;top: 0;right: 0;width: 0;height: 0;font-size: 0;z-index: 29;margin: 0;padding: 0;}
+.floatLeftBottom {position: fixed;_position: absolute;bottom: 0;left: 0;width: 0;height: 0;font-size: 0;z-index: 29;margin: 0;padding: 0;}
+.floatRightBottom {position: fixed;_position: absolute;bottom: 0;right: 0;width: 0;height: 0;font-size: 0;z-index: 29;margin: 0;padding: 0;}
+.popupBg {position: fixed;margin: 0;padding: 0;top: 0;left: 0;right: 0;bottom: 0;height: 100%;_position: absolute;_height: expression(document.documentElement.clientHeight);background-color: #000;filter: alpha(opacity=70);z-index: 9031;overflow: hidden;opacity: .7}
+.mobiPlatformIcon {
+	position: fixed;
+	_position: absolute;
+	width: 47px;
+	*width: 40px;
+	height: 60px;
+	*height: 79px;
+	z-index: 9031
+}
+.mobiPlatformIcon_left {
+	top: 50%;
+	left: 0;
+	background: url(../images/phoneTip_left.png) no-repeat 0 0;
+	*background: url(../images/phoneTip2_left.png) no-repeat 0 0
+}
+.mobiPlatformIcon_right {
+	top: 50%;
+	right: 0;
+	background: url(../images/phoneTip_right.png) no-repeat 0 0;
+	*background: url(../images/phoneTip2_right.png) no-repeat 0 0
+}
+.mobiPlatformIcon-handle {
+	display: block;
+	width: 100%;
+	height: 100%;
+	outline: 0
+}
+.mobiPlatform {
+	cursor: move;
+	position: fixed;
+	_position: absolute;
+	bottom: 30px;
+	right: 40px;
+	z-index: 9032
+}
+.mobiPlatform-hide {
+	opacity: 0;
+	filter: alpha(opacity=0)
+}
+.mp-innerCover {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 2
+}
+.mobiPlatform_big {
+	width: 295px;
+	height: 592px;
+	background: url(../images/big_phone.png) no-repeat 0 0;
+	_background: url(../images/big_phone.gif) no-repeat 0 0
+}
+.mobiPlatform_small {
+	width: 291px;
+	height: 483px;
+	background: url(../images/small_phone.png) no-repeat 0 0;
+	_background: url(../images/small_phone.gif) no-repeat 0 0;
+	display: none;
+}
+.mobiPlatform_big .mp-innerIframe {
+	width: 265px;
+	height: 490px;
+	position: absolute;
+	top: 42px;
+	left: 15px
+}
+.mobiPlatform_small .mp-innerIframe {
+	width: 265px;
+	height: 400px;
+	position: absolute;
+	top: 33px;
+	left: 13px
+}
+.mp-innerIframe2 {
+	position: relative;
+	background: url(../images/updateTip.jpg) no-repeat center center
+}
+.mp-updateBtnContainer {
+	width: 100%;
+	height: 33px;
+	position: absolute;
+	left: 0
+}
+.mobiPlatform_big .mp-updateBtnContainer {
+	bottom: 70px
+}
+.mobiPlatform_small .mp-updateBtnContainer {
+	bottom: 30px
+}
+.mp-updateBtn {
+	display: block;
+	width: 120px;
+	height: 33px;
+	margin: 0 auto;
+	background: url(../images/updateBtn.jpg) no-repeat 0 0
+}
+.mp-loading {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.mp-loading-icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: url(../images/loading.png) no-repeat 0 0;
+	border-radius: 5px;
+	background-size: 40px 40px
+}
+.mobiPlatform_big .mp-loading-icon,
+.mobiPlatform_small .mp-loading-icon {
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -20px
+}
+.mp-loading-iconAction {
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-animation: mp-loading-iconAction 1s infinite;
+	-ms-animation: mp-loading-iconAction 1s infinite;
+	-moz-animation: mp-loading-iconAction 1s infinite;
+	-o-animation: mp-loading-iconAction 1s infinite;
+	animation: mp-loading-iconAction 1s infinite
+}
+.mobiPlatform .mp-hoverTip {
+	width: 325px;
+	height: 30px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	top: -46px;
+	left: -16px;
+	background: url(../images/hoverTips.png?v=201506011730) no-repeat 0 0
+}
+/*手机模版结束*/

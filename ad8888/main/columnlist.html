@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>栏目管理=>栏目设置</title>
+    <link href="../style/Style.css" rel="stylesheet" />
+    <link href="../lhgdialog/skins/default.css" rel="stylesheet" />
+    <script src="../script/jquery-1.7.2.min.js"></script>
+    <script src="../script/jquery.treeview.js"></script>
+    <script src="../lhgdialog/lhgdialog.min.js"></script>
+    <script src="../script/jQueryPlugin.js"></script>
+    <script src="../script/JavaScript.js"></script>
+    <!--[if lte IE 6]>    <script src="script/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type="text/javascript">DD_belatedPNG.fix('*');</script><![endif]-->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var msg = jQuery(".msgBox");
+            msg.each(function () {
+                var t = jQuery(this);
+                t.click(function () {
+                    var api = jQuery.dialog({
+                        lock: true,
+                        title: "选择模版",
+                        content: "url:/SystemAdmin/dialog/set02.html",
+                        width: 835,
+                        height: 350,
+                        cancelVal: '关闭',
+                        cancel: true,
+                        ok: true
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="filetree treeview mainAutoHeight border_radius">
+        <ul id="browser" class="autoHeight_scroll browser">
+            <li><span class="folder">當前站點</span>
+                <ul>
+                    <li class="closed"><span class="folder">企業介紹</span>
+                        <ul>
+                            <li><span class="file">企業介紹</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">企業資訊</span>
+                        <ul>
+                            <li><span class="file">企業資訊</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">紅妃臻品</span>
+                        <ul>
+                            <li><span class="file">紅妃臻品</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">招商加盟</span>
+                        <ul>
+                            <li><span class="file">招商加盟</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">美麗天地</span>
+                        <ul>
+                            <li><span class="file">美麗天地</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">聯系我們</span>
+                        <ul>
+                            <li><span class="file">聯系我們</span></li>
+                        </ul>
+                    </li>
+                    <li class="file">網站會員</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="ContainerMain_Box mainAutoHeight border_radius">
+        <div class="column_Box mainAutoHeight">
+            <div class="tab">
+                <ul>
+                    <li class="current"><a href="javascript:">欄目屬性</a></li>
+                    <li><a href="javascript:">附帶發布</a></li>
+                    <li><a href="javascript:">自定義字段</a></li>
+                    <li><a href="javascript:">高級設置</a></li>
+                </ul>
+            </div>
+            <div class="wrapBox mainAutoHeight">
+                <!--欄目屬性-->
+                <div class="body">
+                    <div class="item">
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian2"></span><i>新建欄目</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>新建批量</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_publish"></span><i>發布整站</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_publish"></span><i>發布首頁</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_yulan"></span><i>預覽</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_yulan"></span><i>重置欄目資源</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>刪除所有欄目</i></a>
+                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="td1">站點名稱：</td>
+                            <td>中文版</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">站點URL   ：</td>
+                            <td>中文版</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">是否生成：</td>
+                            <td><input type="radio" id="radio1" name="radio1" checked="checked" /><label for="radio1">是</label><input type="radio" id="radio2" name="radio1" /><label for="radio2">否</label><em>*</em></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">生成模式：</td>
+                            <td><input type="radio" id="radio3" name="radio2" checked="checked" /><label for="radio2">是</label><input type="radio" id="radio4" name="radio2" /><label for="radio2">否</label><em>*</em></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">首頁模版：</td>
+                            <td>
+                                <input type="text" class="file_txt" value="" />
+                                <input type="button" value="选择模版" name="Submit" class="msgBox" />&nbsp;&nbsp;<input type="submit" value="更新" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td1">描述：</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--附帶發布-->
+                <div class="body">
+                    <div class="item">
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>新建</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_edit"></span><i>编辑</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>删除</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_build"></span><i>生成</i></a>
+                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="center">
+                        <thead>
+                            <tr>
+                                <th width="5%"><input type="checkbox" name="checkBox_All" class="checkBox_All" /></th>
+                                <th width="35%">名稱</th>
+                                <th width="20%">模板文件</th>
+                                <th width="20%">生成文件</th>
+                                <th width="20%">管理操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox" class="checkBox_list" /></td>
+                                <td>222</td>
+                                <td>首頁.shtml</td>
+                                <td>222</td>
+                                <td><a href="#">預覽</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="checkBox" class="checkBox_list"  /></td>
+                                <td>111</td>
+                                <td>111.shtml</td>
+                                <td>111</td>
+                                <td><a href="#">預覽</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--自定義字段-->
+                <div class="body">
+                    <div class="item">
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_pizhu"></span><i>當前欄目</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_pizhu"></span><i>信息類別</i></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>新增字段</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>添加已有字段</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_remove"></span><i>批量移除字段</i></a>
+                    </div>
+                    <table  border="0" cellpadding="0" cellspacing="0" class="center">
+                        <thead>
+                            <tr>
+                                <th width="5%"><input type="checkbox" name="checkBox_All2" class="checkBox_All" /></th>
+                                <th width="5%">ID</th>
+                                <th width="15%">數據庫存字段名</th>
+                                <th width="10%">字段别名 </th>
+                                <th width="10%">字段類型 </th>
+                                <th width="5%">字段級別 </th>
+                                <th width="3%">必填 </th>
+                                <th>管理操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox2" class="checkBox_list" /></td>
+                                <td>3280</td>
+                                <td>State</td>
+                                <td>栏目编号 </td>
+                                <td>隱藏</td>
+                                <td>系統</td>
+                                <td><span style="color:#000000">√</span></td>
+                                <td>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_edit"></span><i>編輯</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_remove"></span><i>移除</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listshow"></span><i>列表顯示</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_listhide"></span><i>列表隐藏</i></a>
+                                    <a href="#" class="dot_Item"><span class="Icon_item icon_searchitem"></span><i>搜索隐藏</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--高級設置-->
+                <div class="body">
+                    <div class="item">
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_save"></span><i>保存</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian2"></span><i>新建子欄目</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>刪除</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_devert"></span><i>移動</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>批量新建</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_publish"></span><i>發布</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_yulan"></span><i>預覽</i></a>
+                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="td2">栏目ID：</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td class="td2">栏目类型：</td>
+                            <td>
+                                <select><option>简单信息</option><option>简单信息</option><option>简单信息</option><option>简单信息</option></select><br />
+                                <label style="color:red; ">注：修改栏目类型后，不能还原原来的信息</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td2">首页模版：</td>
+                            <td><input type="text"  value="企业介绍" /><em> * </em><input type="submit" value="选择" class="msgBox" /></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">列表页模版：</td>
+                            <td><input type="text"  value="企业介绍" /><em> * </em><input type="submit" value="选择" class="msgBox" /></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">详细页模版：</td>
+                            <td><input type="text"  value="aboutus" /><em> * </em><input type="submit" value="选择" class="msgBox" /></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">详细页命名规则：</td>
+                            <td><input type="text"  value="aboutus" /><em> * </em><input type="submit" value="设置" class="msgBox" /></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">是否生成：</td>
+                            <td><input type="radio" id="radio8" name="radio8" checked="checked" /><label for="radio8">是</label><input type="radio" id="radio9" name="radio8" /><label for="radio9">否</label><em> * </em></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">生成模式：</td>
+                            <td><input type="radio" id="radio7" name="radio10" checked="checked" /><label for="radio5">静态</label><input type="radio" id="radio11" name="radio10" /><label for="radio11">动态</label><em> * </em></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">是否单独类别：</td>
+                            <td><input type="radio" id="radio10" name="radio11" checked="checked" /><label for="radio10">是</label><input type="radio" id="radio12" name="radio11" /><label for="radio12">否</label><em> * </em></td>
+                        </tr>
+                        <tr>
+                            <td class="td2">审核流程：</td>
+                            <td><select><option>会员审核</option></select></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

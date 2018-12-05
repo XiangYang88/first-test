@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>网站后台管理系统-互诺科技</title>
+    <link href="../style/Style.css" rel="stylesheet" />
+    <script src="../script/jquery-1.7.2.min.js"></script>
+    <script src="../script/jQueryPlugin.js"></script>
+    <script src="../script/JavaScript.js"></script>
+    <!--[if lte IE 6]><script src="script/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type="text/javascript">DD_belatedPNG.fix('*');</script><![endif]-->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            hideColumn();
+        });
+        //隐藏左侧栏
+        var hideColumn = function () {
+            //var txt = $(window.parent.document).find("div"); 获取iframe上级文档的div
+            var Container_Left = jQuery(window.parent.document).find(".Container_Left");
+            var ContainerMain = jQuery(window.parent.document).find(".ContainerMain");
+            Container_Left.hide();
+            ContainerMain.css({ marginLeft: 10 });
+        };
+    </script>
+</head>
+<body>
+    <div class="Container_index wrapBox mainAutoHeight" id="Container_index">
+        <div class="about_web">
+            <div class="right">
+                <a href="/" class="dot_Item"  target="_blank"><span class="Icon_item icon_xingjian"></span><i>网站预览</i></a>
+            </div>
+        </div>
+        <div class="minlineheight"></div>
+        <div class="admin_message">
+            <fieldset>
+                <legend class="leg">今日</legend>
+                <span class="color">sysdevelop，您好！</span> 最后一次登录IP地址：203.191.149.72　 时间：2013-10-7 14:03:27   待审核信息：<a href="#" class="color"><b>0</b></a> 条 
+            </fieldset>
+        </div>
+        <div class="minlineheight"></div>
+        <div class="table_Box">
+            <table cellspacing="0" border="0" cellpadding="0" width="100%">
+                <tr>
+                    <td class="set">
+                        <div class="title">SEO检查项目</div>
+                        <ul>
+                            <li><span class="info">全站设置</span><span class="float">设置完毕</span></li>
+                            <li><span class="info">Title设置(检测到有0个栏目未设置Title)</span></li>
+                            <li><span class="info">全站设置</span><span class="float">设置完毕</span></li>
+                            <li><span class="info icon_seo">Mete Keyword设置(检测到有5个栏目未设置Mete Keyword)</span><span class="float"><a href="#">需要优化</a></span></li>
+                            <li><span class="info icon_seo">Description设置(检测到有5个栏目未设置Description)</span><span class="float"><a href="#">需要优化</a></span></li>
+                        </ul>
+                        <div class="title">网站安全检查</div>
+                        <ul>
+                            <li><span class="info">exe文件检测(存在0个EXE文件) <a href="#">查看列表</a></span><span class="float">暂无风险</span></li>
+                            <li><span class="info">asp文件检测(存在0个ASP文件) <a href="#">查看列表</a></span><span class="float">暂无风险</span></li>
+                            <li><span class="info icon_seo">当前帐号已经长时间没有更新密码</span><span class="float"><a href="#">存在风险</a></span></li>
+                            <li><span class="info icon_seo">管理员hunuokeji中存在上线时原始密码，请修改</span><span class="float"><a href="#">存在风险</a></span></li>
+                        </ul>
+                    </td>
+                    <td width="240" valign="top" class="td_right">
+                        <p class="t">功能导航</p>
+                        <ul>
+                            <li>厚度搜不到我网站？使用<a href="#" target="_blank">搜索登记</a></li>
+                            <li>怎样提高网站谷歌排名？ 使用<a href="#" target="_blank">谷歌站图</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

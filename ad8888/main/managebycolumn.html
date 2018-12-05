@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>内容管理=>按栏目管理</title>
+    <link href="../style/Style.css" rel="stylesheet" />
+    <link href="../lhgdialog/skins/default.css" rel="stylesheet" />
+    <script src="../script/jquery-1.7.2.min.js"></script>
+    <script src="../script/jquery.treeview.js"></script>
+    <script src="../lhgdialog/lhgdialog.min.js"></script>
+    <script src="../script/jQueryPlugin.js"></script>
+    <script src="../script/JavaScript.js"></script>
+    <!--[if lte IE 6]>    <script src="script/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type="text/javascript">DD_belatedPNG.fix('*');</script><![endif]-->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $("table tr").each(function () {
+                var tr = jQuery(this);
+
+                tr.bind("dblclick", function () {
+                    var api = $.dialog({
+                        lock:true,
+                        title: "设置列表项",
+                        content: "url:/SystemAdmin/dialog/set01.html",
+                        width: 835,
+                        height: 350,
+                        cancelVal: '关闭',
+                        cancel: true,
+                        ok: true
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="filetree treeview mainAutoHeight border_radius">
+        <ul id="browser" class="autoHeight_scroll browser">
+            <li><span class="folder">欄目管理</span>
+                <ul>
+                    <li class="closed"><span class="folder">企業介紹</span>
+                        <ul>
+                            <li><span class="file">企業介紹</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">企業資訊</span>
+                        <ul>
+                            <li><span class="file">企業資訊</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">紅妃臻品</span>
+                        <ul>
+                            <li><span class="file">紅妃臻品</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">招商加盟</span>
+                        <ul>
+                            <li><span class="file">招商加盟</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">美麗天地</span>
+                        <ul>
+                            <li><span class="file">美麗天地</span></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><span class="folder">聯系我們</span>
+                        <ul>
+                            <li><span class="file">聯系我們</span></li>
+                        </ul>
+                    </li>
+                    <li class="file">網站會員</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="ContainerMain_Box mainAutoHeight border_radius">
+        <div class="column_Box mainAutoHeight">
+                <!--欄目管理-->
+                <div class="body">
+                    <div class="item">
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>新建</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_edit"></span><i>编辑</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_shanchu"></span><i>删除</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_build"></span><i>生成</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_yulan"></span><i>预览</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_fuzhi"></span><i>复制</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_zhuanyi"></span><i>转移</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_yulan"></span><i>回收站</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_fuzhi"></span><i>排序</i></a>
+                        <a href="#"class="dot_Item"><span class="Icon_item icon_xingjian"></span><i>批量更新</i></a>
+                        <div class="searchBar">
+                            标题 <input type="text" class="txt" /> &nbsp;发布时间 &nbsp;<input type="text" class="txt" /> &nbsp;至&nbsp;<input type="text" class="txt" />&nbsp;<input type="submit" class="submit btn_search" value="搜索" />
+                        </div>
+                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0" class="center">
+                        <thead>
+                            <tr>
+                                <th width="5%"><input type="checkbox" name="checkBox_All" class="checkBox_All" /></th>
+                                <th>标题</th>
+                                <th>发布时间</th>
+                                <th style="width:118px;" class="td_btn"><span class="t">发布人</span><a href="javascript:" class="btn_img"></a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="checkBox" class="checkBox_list" /></td>
+                                <td>222</td>
+                                <td>首頁.shtml</td>
+                                <td>222</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="checkBox" class="checkBox_list"  /></td>
+                                <td>111</td>
+                                <td>111.shtml</td>
+                                <td>111</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>系统管理=>上传设置</title>
+    <link href="../style/Style.css" rel="stylesheet" />
+    <script src="../script/jquery-1.7.2.min.js"></script>
+    <script src="../script/jquery.treeview.js"></script>
+    <script src="../script/jQueryPlugin.js"></script>
+    <script src="../script/JavaScript.js"></script>
+    <!--[if lte IE 6]>    <script src="script/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type="text/javascript">DD_belatedPNG.fix('*');</script><![endif]-->
+</head>
+<body>
+    <div class="column_Box mainAutoHeight">
+        <fieldset>
+            <legend>上传设置</legend>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td class="td3">是否重命名文件：</td>
+                        <td><input type="checkbox" checked="checked"  name="ch" id="checkbox" /><label for="checkbox">是</label></td>
+                    </tr>
+                    <tr>
+                        <td class="td3">文件上传保护方式：</td>
+                        <td><select><option>按时期时间存入</option><option>按随机数存入</option></select></td>
+                    </tr>
+                    <tr>
+                        <td class="td3">允许图片的类型：</td>
+                        <td><input type="text" value="jpg|gif|png" class="txt_len2 txt"  /> 图片类型之间用'｜'号隔开</td>
+                    </tr>
+                    <tr>
+                        <td class="td3">上传图片最大值：</td>
+                        <td><input type="text" value="8001" class="txt_len1 txt"  /> KB</td>
+                    </tr>
+                    <tr>
+                        <td class="td3">允许的媒体类型：</td>
+                        <td><input type="text" value="asx|flv|avi|wmv|mp4|mov|asf|mpg|rm|rmvb|swf" class="txt_len2 txt"   /> 媒体类型之间用'｜'号隔开</td>
+                    </tr>
+                    <tr>
+                        <td class="td3">上传媒体最大值：</td>
+                        <td><input type="text" value="10241" class="txt_len1 txt"  /> KB</td>
+                    </tr>
+                    <tr>
+                        <td class="td3">允许的文件类型：</td>
+                        <td><input type="text" value="doc|zip|txt|xls|rar|swf" class="txt_len2 txt"  /> 文件类型之间用‘|’隔开</td>
+                    </tr>
+                    <tr>
+                        <td class="td3">上传文件最大值：</td>
+                        <td><input type="text" value="10241" class="txt_len1 txt"  /> KB</td>
+                    </tr>
+                    <tr>
+                        <td class="td3">&nbsp;</td>
+                        <td><input type="submit" value="保存" class="" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

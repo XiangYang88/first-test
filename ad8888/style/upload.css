@@ -1,0 +1,22 @@
+﻿.hn_upload{ font-size:12px; padding:0 0; margin:0 0; line-height:200%}
+.hn_upload .upselect{ clear:both; margin:10px auto auto 10px; }
+.hn_upload .upselect dl dt,.upselect dl dd{ float:left; line-height:200%; }
+.hn_upload .swfupload{vertical-align:top;}
+.hn_upload .upload_btn{ display:inline; padding:4px 0 2px 5px; line-height:200%; *padding:0 0 0 5px; border:1px solid #d7d7d7; background:url(../img/upbtn_bg.gif) repeat-x left 1px; color: #707070; cursor:pointer; overflow:hidden; vertical-align:middle; }
+.hn_upload .upselect dl dd label{margin-left:10px;padding:7px 0 0; color:#717171; line-height:200%;}
+.hn_upload .pic{float:left;/*width:65px;height:90px;*/margin-right:10px;text-align:center}
+.hn_upload .pic img{border:3px #efefed solid; cursor:pointer; width:100px; height:100px;}
+.hn_upload .pic img.current{border:3px #f60 solid}
+.hn_upload .txtInput{ margin-right:5px; padding:0 3px 0 3px; height:22px; line-height:22px; background:#FAFAFA; border:1px solid #D7D7D7; vertical-align:middle; font-size:12px; font-family:'微软雅黑'; }
+.hn_upload input.normal {width: 255px;}
+
+.hn_upload #show_list{margin:0; padding:0;}
+.hn_upload #show_list ul{ margin:0; list-style:none; }
+.hn_upload #show_list ul li{ float:left; margin-right:10px; text-align:center; *width:111px;}
+.hn_upload #show_list ul li .img_box{ margin:5px 5px 5px auto; position:relative; width:100px; height:100px; overflow:hidden; border:3px #efefed solid; cursor:pointer; }
+.hn_upload #show_list ul li .img_box.current{ border:3px #f60 solid }
+.hn_upload #show_list ul li .img_box img{ width:100px; height:100px; opacity:1; }
+.hn_upload #show_list ul li .img_box .remark{ top:80px; left:0px; margin:0; padding:3px 2px; position:absolute; display:block; width:96px; height:94px; overflow:hidden; background:#000; filter:alpha(opacity=50); opacity:0.5; -moz-opacity:0.5; text-align:left; font-family:"微软雅黑"; }
+.hn_upload #show_list ul li .img_box .remark:hover{ top:0px; }
+.hn_upload #show_list ul li .img_box .remark i{ color:#fff; font-style:normal; position:relative; line-height:16px; }
+.hn_upload #show_list ul li a{ padding-right:1em; color: #005EAC;text-decoration: none;}

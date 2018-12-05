@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>通用后臺管理系統</title>
+    <link href="style/Style.css" rel="stylesheet" />
+    <script src="script/jquery-1.7.2.min.js"></script>
+    <script src="script/jQueryPlugin.js"></script>
+    <script src="script/JavaScript.js"></script>
+    <!--[if lte IE 6]>    <script src="script/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type="text/javascript">DD_belatedPNG.fix('*');</script><![endif]-->
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".current_click").each(function () {
+                var list = jQuery(this).find("ul.c li");
+                var liList = jQuery(".Container_Left ul");
+                list.each(function () {
+                    var o = jQuery(this);
+                    o.click(function () {
+                        list.removeClass('current');
+                        o.addClass('current');
+                    });
+                    //显示相对应的左侧栏目
+                    o.children("a").click(function () {
+                        var a = jQuery(this);
+                        var className = a.attr("class");
+                        if (className == undefined) return;
+                        var newlist = liList.find("." + className);
+                        liList.children("li").hide();
+                        newlist.show().eq(0).click();
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="Header">
+        <a class="logo" href="javascript:" onclick="document.location.reload();"></a>
+        <div class="MenuDiv current_click">
+            <ul class="c">
+                <li><a href="main/managebycolumn.html" target="main" class="show_b">内容管理</a></li>
+                <li class="current"><a href="main/columnlist.html" target="main" class="show_a">栏目管理</a></li>
+                <li><a href="#">模版库管理</a></li>
+                <li><a href="#">权限管理</a></li>
+                <li><a href="main/menulist.html" target="main" class="show_c">系统管理</a></li>
+                <li><a href="#">站点设置</a></li>
+                <li><a href="#">扩展功能</a></li>
+            </ul>
+        </div>
+        <div class="itemBar">
+            <ul>
+                <li><a href="#" class="name">林炳年</a>，您好！</li>
+                <li><a href="#" class="c">管理平台</a></li>
+                <li><a href="#" class="pas">修改密码</a></li>
+                <li><a href="#" class="about">关于互诺科技</a></li>
+                <li><a href="#" class="out">退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="minlineheight"></div>
+    <div class="Container">
+        <div class="Container_Left autoHeight current_click">
+            <ul class="c">
+                <!--栏目管理 -->
+                <li class="show_a current"><a href="main/columnlist.html" target="main">栏目设置</a></li>
+                <li class="show_a"><a href="main/BindColumn.html" target="main">栏目模版管理</a></li>
+                <!--内容管理 -->
+                <li class="current show_b"><a href="main/managebycolumn.html" target="main">按栏目管理</a></li>
+                <li class="show_b"><a href="main/memberlist.html" target="main">会员管理</a></li>
+                <li class="show_b"><a href="main/list.html" target="main">待审核信息</a></li>
+                <!--系统管理-->
+                <li class="current show_c"><a href="main/menulist.html" target="main">菜单管理</a></li>
+                <li class="show_c"><a href="main/upload.html" target="main">上传设置</a></li>
+            </ul>
+        </div>
+        <div class="ContainerMain autoHeight">
+            <iframe src="main/admin.html" width="100%" height="100%" id="main" frameborder="0" scrolling="no" name="main"></iframe>
+        </div>
+    </div>
+    <div class="Footer">
+        Copyright  &copy; <a href="http://www.hunuo.com" target="_blank">hunuo.com</a>
+    </div>
+</body>
+</html>
